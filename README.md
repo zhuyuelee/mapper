@@ -5,6 +5,12 @@ tag标签 mapper
  ```go
  Name string `mapper:"name"`
 ```
+## 安装
+
+```
+go get github.com/zhuyuelee/mapper
+```
+
 example
 ``` 
 type BaseDto struct{
