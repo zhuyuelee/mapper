@@ -11,36 +11,6 @@ tag标签 mapper
 go get github.com/zhuyuelee/mapper
 ```
 
-## example for map to Struct
-``` 
-type BaseDto struct{
- CreatedAt time.Time
- UpdatedAt time.Time
-
-}
-type StudentDto struct{
-    Name string
-    BaseDto `mapper:"base"`
-}
-
-type StudentModel struct{
-    Name string
-    gorm.Model `mapper:"base"`
-}
-
-source:= Student{
-    Name:"MyName",
-    Model:gorm.Model{
-        CreatedAt:time.Now(),
-        UpdatedAt:time.Now(),
-    },
-}
-
-to:=&StudentDto{}
-mapper.Map(source,to)
-
-```
-
 ## example struct
 ```
 type BaseDto struct {
